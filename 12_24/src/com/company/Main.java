@@ -1,25 +1,16 @@
 package com.company;
 
 public class Main {
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         int a = 12;
-        byte number1 = 14;
+        byte number1 = 12;
         short number2 = 100;
-        String title = "SDK";
+        String title = "My first soft";
         char letter = 'M';
-        double sum = 16878.3245;
-        float pi = 3.14f;
+        double sum = 12743.7484;
+        float pi =3.14543f;
         boolean result = false;
-        System.out.println(a);
-        System.out.println(number1);
-        System.out.println(number2);
-        System.out.println(title);
-        System.out.println(letter);
-        System.out.println(sum);
-        System.out.println(pi);
-        System.out.println(result);
 
-
+        System.out.println(a+ " " + number1 + " " + number2 + " " + title + " " + letter + " " + sum + " " + pi + " " + result);
     }
 }
