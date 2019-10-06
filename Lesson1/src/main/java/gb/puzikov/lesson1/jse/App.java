@@ -8,6 +8,11 @@ public class App {
         FirstPartOfHW firstPartOfHW = new FirstPartOfHW();
         firstPartOfHW.printInfo();
         System.out.println("----------------------");
+//        System.out.println("Результат 2 задания:");
+//        SecondPartOfHW secondPartOfHW = new SecondPartOfHW();
+//        secondPartOfHW.printInfo();
+//        System.out.println("----------------------");
+
 
     }
 }
