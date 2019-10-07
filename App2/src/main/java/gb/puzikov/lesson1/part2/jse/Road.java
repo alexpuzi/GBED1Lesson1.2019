@@ -7,19 +7,27 @@ public class Road {
         this.lenght = lenght;
     }
 
-    public boolean doRun(Cat catrun) {
-        int runlength = catrun.run();
-        return runlength >= lenght;
+    int roadInfo() {
+        return 500;
     }
 
+
     public static void main(String[] args) {
+        Road road = new Road(8888);
         Cat cat = new Cat(8888);
-        Road road = new Road(900);
-        boolean result1 = road.doRun(cat);
-        if (result1 == false) {
+        int resultR = road.roadInfo();
+        int result1 = cat.run();
+        if (result1 >= resultR) {
             System.out.println("Кот не справился с бегом");
         } else {
             System.out.println("Кот справился с бегом");
+        }
+        Men men = new Men(9000);
+        int result2 = men.run();
+        if (result2 >= resultR) {
+            System.out.println("Men не справился с бегом");
+        } else {
+            System.out.println("Men справился с бегом");
         }
     }
 }
