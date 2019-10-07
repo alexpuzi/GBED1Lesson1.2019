@@ -1,12 +1,17 @@
 package gb.puzikov.lesson1.part2.jse;
 
 public class Men {
-    int run;
+    String name;
 
-    public Men(int run) {
-        this.run = run;
+    public Men(String name) {
+        this.name = name;
     }
+
     int run() {
-        return 500;
+        return 1000;
+    }
+
+    int jump() {
+        return 4;
     }
 }

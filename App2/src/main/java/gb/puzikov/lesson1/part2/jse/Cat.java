@@ -1,12 +1,17 @@
 package gb.puzikov.lesson1.part2.jse;
 
 public class Cat {
-    int run;
+    String name;
 
-    public Cat(int run) {
-         this.run = run;
+    public Cat(String name) {
+        this.name = name;
     }
+
     int run() {
         return 100;
+    }
+
+    int jump() {
+        return 2;
     }
 }
