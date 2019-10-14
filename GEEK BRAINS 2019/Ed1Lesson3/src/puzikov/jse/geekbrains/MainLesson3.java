@@ -29,6 +29,23 @@ class MainLesson3 {
         System.out.println("Work Part_1:");
         Part1 part1 = new Part1();
         part1.part1();
+        System.out.println("------------------");
+        System.out.println("Work Part_2:");
+        HashMap<String, Long> hm1= new HashMap<>();
+        hm1.put("Ivanov", 89854598595l);
+        hm1.put("Ivanov", 89854565223l);
+        hm1.put("Petrov",89164567894l);
+        hm1.put("Petrov",97539212445l);
+        hm1.put("Sidorov", 12334592013l);
+        hm1.put("Ivanov", 89334498595l);
+        hm1.put("Ivanov", 8985456986l);
+        hm1.put("Petrov",891612907894l);
+        hm1.put("Petrov",97539217895l);
+        hm1.put("Sidorov", 12334515013l);
+        hm1.put("Kirieshkin",33405800950l);
+        System.out.println("Ivanov -" + hm1.get("Ivanov"));
+
+
 
     }
 }
