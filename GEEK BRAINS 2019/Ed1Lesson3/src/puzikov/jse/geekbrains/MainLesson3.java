@@ -23,6 +23,7 @@ package puzikov.jse.geekbrains;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 class MainLesson3 {
     public static void main(String[] args) {
@@ -31,21 +32,27 @@ class MainLesson3 {
         part1.part1();
         System.out.println("------------------");
         System.out.println("Work Part_2:");
-        HashMap<String, Long> hm1= new HashMap<>();
+        HashMap<String, Long> hm1 = new HashMap<>();
         hm1.put("Ivanov", 89854598595l);
         hm1.put("Ivanov", 89854565223l);
-        hm1.put("Petrov",89164567894l);
-        hm1.put("Petrov",97539212445l);
+        hm1.put("Petrov", 89164567894l);
+        hm1.put("Petrov", 97539212445l);
         hm1.put("Sidorov", 12334592013l);
         hm1.put("Ivanov", 89334498595l);
         hm1.put("Ivanov", 8985456986l);
-        hm1.put("Petrov",891612907894l);
-        hm1.put("Petrov",97539217895l);
+        hm1.put("Petrov", 891612907894l);
+        hm1.put("Petrov", 97539217895l);
         hm1.put("Sidorov", 12334515013l);
-        hm1.put("Kirieshkin",33405800950l);
-        System.out.println("Ivanov -" + hm1.get("Ivanov"));
-
-
-
+        hm1.put("Kirieshkin", 33405800950l);
+//        System.out.println("Ivanov - " + hm1.get("Ivanov"));
+//        for (Map.Entry<String,Long> o : hm1.entrySet()){
+//            System.out.println(o.getKey() + ": "+ o.getValue());
+//        }
+//        for (String key : hm1.keySet()){
+//            Long value = hm1.get(key);
+        hm1.forEach((k, v) -> {
+            System.out.println(k + ": " + v);  
+        });
     }
 }
+
