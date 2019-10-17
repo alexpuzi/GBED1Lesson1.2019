@@ -1,6 +1,7 @@
 package puzikov.jse.geekbrainsEd1L4;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,47 +15,30 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MyWindow3 extends JFrame {
-//        JPanel jpTextFild = new JPanel(new GridLayout());
-//        JPanel jpTaxtAria = new JPanel(new GridLayout());
-//        JTextField jTextField = new JTextField(20);
-//        JTextArea jTextArea = new JTextArea();
-//        JScrollPane jScrollPane = new JScrollPane(jpTaxtAria);
-//        JButton jButton = new JButton("Enter text");
-//
-//     public MyWindow3() throws IOException {
-//        setTitle("Homework 4");
-//        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//        setSize(400,500);
-//        jpTaxtAria.setLineWrap(true);
-//      
-//
-//
-//        setVisible(true);
-//    }
-public MyWindow3() {
-    super("Текстовые поля");
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    private JLabel jLabel;
+    private JTextField jTextField;
 
-    JTextField jTextField = new JTextField(25);
-    jTextField.setToolTipText("Короткое поле");
-    JTextArea jTextArea = new JTextArea();
-    jTextArea.setFont(new Font("Message", Font.CENTER_BASELINE,20));
-
-    jTextField.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-
-            JOptionPane.showMessageDialog(MyWindow3.this,
-                    "Message: " + jTextField.getText());
-        }
-    });
-
-    JPanel contents = new JPanel(new FlowLayout(FlowLayout.LEFT));
-    contents.add(jTextField);
-
-    setContentPane(contents);
-    setSize(400, 400);
-    setVisible(true);
-}
+    public MyWindow3() {
+        super("Homework 4");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setBounds(300, 300, 300, 160);
+        setResizable(false);
+        setLayout(null);
+        jLabel = new JLabel();
+        jLabel.setBounds(10, 10, 270, 30);
+        jLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        jTextField = new JTextField();
+        jTextField.setBounds(jLabel.getX(), 90, getWidth(), 30);
+        int bw = (jTextField.getWidth() - 20) / 2;
+        JButton jButton = new JButton("Send");
+        jButton.setBounds(jTextField.getX(), 90, bw, 30);
+        jButton.setFocusPainted(false);
+        jButton.addActionListener(e -> jLabel.setText(jTextField.getText()));
+        add(jLabel);
+        add(jTextField);
+        add(jButton);
+        setVisible(true);
+    }
 }
 
 
