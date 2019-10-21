@@ -18,9 +18,8 @@ public class MyThread extends Thread {
 
             //
         }
-        long a = System.currentTimeMillis(); // проверка
-        System.out.println(a);
-    }
+
+    }long a = System.currentTimeMillis();
 
     public float[] calculateMetod(float[] arrHM4) {
         for (int i = 0; i < arrHM4.length; i++)
@@ -30,8 +29,30 @@ public class MyThread extends Thread {
         return arrHM4;
     }
 
-    public void run() {
+    public void run1() {
+        float[] arrHM4_1 = new float[sIze];
         System.arraycopy(arrHM4, 0, arrHM4_1, 0, hAlf);
-    }
+        System.arraycopy(arrHM4,hAlf,arrHM4_2,0,hAlf);
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                float[] a1 = calculateMetod(arrHM4_1);
+                System.arraycopy(a1,0,arrHM4_1,0,a1.length);
+            }
+        }.start();
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                float[] a2 = calculateMetod(arrHM4_2);
+                System.arraycopy(a2,0,arrHM4_2,0,a2.length);
+            }
+        }.start();
+        System.arraycopy(arrHM4_1,0,arrHM4,0,hAlf);
+        System.arraycopy(arrHM4_2,0,arrHM4,hAlf,hAlf);
+        System.out.println("Tow threads ends with:"+(System.currentTimeMillis()-a));
+            }
+
 
 }
