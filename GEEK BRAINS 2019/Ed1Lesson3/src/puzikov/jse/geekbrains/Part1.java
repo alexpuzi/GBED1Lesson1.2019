@@ -41,6 +41,7 @@ public class Part1 {
         String word11 = "Robber of the Rich";
         String word12 = "Gilded Goose";
         String word13 = "Realm-Cloaked Giant";
+
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add(word1);
         arrayList.add(word2);

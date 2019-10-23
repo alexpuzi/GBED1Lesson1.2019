@@ -1,3 +1,5 @@
+import java.lang.Exception;
+import java.util.*;
 /*
 1. Напишите метод,на вход которого подается двумерный
         строковый массив размером 4х4, при подаче массива
@@ -15,6 +17,10 @@
 public class Main {
 
     public static void main(String[] args) {
+        String[][] array4x4 = new String[4][4];
+        String[][] array4x6 = new String[4][6];
 
-    }
+
+
+            }
 }

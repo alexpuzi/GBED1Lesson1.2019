@@ -25,7 +25,7 @@ public class App {
 
         Road road = new Road("M9");
 
-        Cat cat = new Cat("Volt", "jump","Run");
+        Cat cat = new Cat("Volt", "jump", "Run");
         int resultR = road.roadInfo();
         int resultW = road.wallInfo();
         int result1 = cat.run();

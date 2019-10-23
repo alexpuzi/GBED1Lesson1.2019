@@ -51,7 +51,7 @@ class MainLesson3 {
 //        for (String key : hm1.keySet()){
 //            Long value = hm1.get(key);
         hm1.forEach((k, v) -> {
-            System.out.println(k + ": " + v);  
+            System.out.println(k + ": " + v);
         });
     }
 }
