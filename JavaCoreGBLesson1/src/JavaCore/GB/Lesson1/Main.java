@@ -1,13 +1,7 @@
 package JavaCore.GB.Lesson1;
-import JavaCore.GB.Lesson1.part_1.JavaCoreL1;
-import JavaCore.GB.Lesson1.part_2.JavaCoreL1P2;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 //1. Написать метод, который меняет два элемента
 // массива местами (массив может быть любого
 // ссылочного типа);
@@ -42,12 +36,23 @@ import java.util.stream.StreamSupport;
 public class Main {
 
     public static void main(String[] args) {
-        //
+        TechnicalClass<String,Integer> technicalClass;
+        technicalClass = new TechnicalClass<>("part",1,2,3);
+        technicalClass.inform();
+        System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_1());
 
-        System.out.println("part 2");
-        JavaCoreL1P2<String> part2 = new JavaCoreL1P2<String>("");
 
 
+
+        technicalClass.inform();
+        System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_2());
+        String[] part2 = new String[]{"Слово_1", "Слово_2", "Слово_3"};
+        List<String> arrayList = Arrays.asList(part2);
+        for (String e : arrayList){
+            System.out.println(e);
+        }
+        technicalClass.inform();
+        System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_3());
 
     }
 }
