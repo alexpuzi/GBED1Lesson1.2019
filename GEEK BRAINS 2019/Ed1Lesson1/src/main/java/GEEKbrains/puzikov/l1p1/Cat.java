@@ -4,7 +4,7 @@ public class Cat {
     String name;
     String jump2019;
     String run2019;
-    public Cat(String name, String jump2019, String run2019) {
+    Cat(String name, String jump2019, String run2019) {
         this.name = name;
         this.jump2019=jump2019;
         this.run2019=run2019;

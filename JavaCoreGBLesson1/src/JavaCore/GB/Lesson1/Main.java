@@ -1,5 +1,6 @@
 package JavaCore.GB.Lesson1;
-
+import JavaCore.GB.Lesson1.part_3.JavaCoreL3;
+import JavaCore.GB.Lesson1.part_1.JavaCoreL1;
 import java.util.Arrays;
 import java.util.List;
 //1. Написать метод, который меняет два элемента
@@ -36,19 +37,19 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        TechnicalClass<String,Integer> technicalClass;
-        technicalClass = new TechnicalClass<>("part",1,2,3);
+        TechnicalClass technicalClass;
+        technicalClass = new TechnicalClass("part", 1, 2, 3);
         technicalClass.inform();
         System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_1());
-
-
+        JavaCoreL1<Integer> arrayOffirstPart = new JavaCoreL1<>(1,1,2,2,2);
+        arrayOffirstPart.workWithArrayElements();
 
 
         technicalClass.inform();
         System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_2());
         String[] part2 = new String[]{"Слово_1", "Слово_2", "Слово_3"};
         List<String> arrayList = Arrays.asList(part2);
-        for (String e : arrayList){
+        for (String e : arrayList) {
             System.out.println(e);
         }
         technicalClass.inform();

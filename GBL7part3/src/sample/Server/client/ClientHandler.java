@@ -12,7 +12,7 @@ public class ClientHandler {
     private MyServer myServer;
     private String clientName;
     private Socket socket;
-    private DataOutputStream in;
+    private DataInputStream in;
     private DataOutputStream out;
 
     public ClientHandler(Socket socket, MyServer myServer) {
@@ -26,15 +26,18 @@ public class ClientHandler {
                 try {
                     authentication();
                     readMessage();
-                } catch (IOException e) {
-                    e.printStackTrace();
                 } finally {
-                    closeConnection();
+
                 }
+
+
             }).start();
         } catch (IOException e) {
             throw new RuntimeException("Failed to create client handler", e);
         }
+    }
+
+    private void authentication() {
     }
 
     private void readMessage() {

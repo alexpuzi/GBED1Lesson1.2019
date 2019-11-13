@@ -14,10 +14,10 @@ public class MyThread extends Thread {
 
         for (int i = 0; i < sIze; i++) {
             arrHM1[i] = (float) (arrHM1[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-        System.out.println(arrHM1[i]);
+//        System.out.println(arrHM1[i]);
         }
         long a = System.currentTimeMillis();
-        System.out.println(a);
+//        System.out.println(a);
     }
 
     @Override

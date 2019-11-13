@@ -4,7 +4,6 @@ public class JavaCoreL1P2 <T> {
     T obj_1;
     T obj_2;
     T obj_3;
-    ;
 
 
     public JavaCoreL1P2(T obj_1, T obj_2, T obj_3) {
