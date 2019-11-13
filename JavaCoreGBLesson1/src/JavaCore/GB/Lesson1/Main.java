@@ -36,13 +36,14 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static <T extends Number> void main(String[] args) {
         TechnicalClass technicalClass;
         technicalClass = new TechnicalClass("part", 1, 2, 3);
         technicalClass.inform();
+        //далее само 1 задание
         System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_1());
-        JavaCoreL1<Integer> arrayOffirstPart = new JavaCoreL1<>(1,1,2,2,2);
-        arrayOffirstPart.workWithArrayElements();
+        JavaCoreL1<T> arrayOffirstPart = new JavaCoreL1<T>(1,1,2,2,2);
+        System.out.println(Arrays.toString(arrayOffirstPart.workWithArrayElements()));
 
 
         technicalClass.inform();
@@ -54,6 +55,7 @@ public class Main {
         }
         technicalClass.inform();
         System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_3());
+        // Will do tomorrow
 
     }
 }
