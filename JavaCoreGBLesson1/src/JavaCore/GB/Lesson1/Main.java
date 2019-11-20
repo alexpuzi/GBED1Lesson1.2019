@@ -1,5 +1,5 @@
 package JavaCore.GB.Lesson1;
-import JavaCore.GB.Lesson1.part_3.JavaCoreL3;
+
 import JavaCore.GB.Lesson1.part_1.JavaCoreL1;
 import java.util.Arrays;
 import java.util.List;
@@ -37,15 +37,23 @@ import java.util.List;
 public class Main {
 
     public static <T extends Number> void main(String[] args) {
+
         TechnicalClass technicalClass;
         technicalClass = new TechnicalClass("part", 1, 2, 3);
         technicalClass.inform();
         //далее само 1 задание
         System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_1());
-        JavaCoreL1<T> arrayOffirstPart = new JavaCoreL1<T>(1,1,2,2,2);
-        System.out.println(Arrays.toString(arrayOffirstPart.workWithArrayElements()));
+        try {
+            JavaCoreL1<T> arrayOffirstPart = new JavaCoreL1<T>(1, 2, 2, 2);
+            System.out.println(Arrays.toString(arrayOffirstPart.workWithArrayElements()));
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Do later");
+        }
 
 
+        //Done (second part)
         technicalClass.inform();
         System.out.printf("%s%d%n", technicalClass.getPart(), technicalClass.getNumber_2());
         String[] part2 = new String[]{"Слово_1", "Слово_2", "Слово_3"};
